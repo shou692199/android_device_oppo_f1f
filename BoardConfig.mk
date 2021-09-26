@@ -26,6 +26,7 @@ TARGET_BOARD_INFO_FILE ?= $(DEVICE_PATH)/board-info.txt
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
+BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH += $(DEVICE_PATH)/include
@@ -48,7 +49,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 
 # Shipping API
-PRODUCT_SHIPPING_API_LEVEL := 22
+# PRODUCT_SHIPPING_API_LEVEL := 22
 
 # Inherit from proprietary files
 include vendor/oppo/f1f/BoardConfigVendor.mk
